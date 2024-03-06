@@ -1,0 +1,552 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+				<!--begin::Aside-->
+		<div class="d-flex flex-column flex-root">
+			<div class="d-flex flex-row flex-column-fluid page">
+				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+					<!--begin::Brand-->
+					<div class="brand flex-column-auto" id="kt_brand">
+						<!--begin::Logo-->
+						<a href="index.html" class="brand-logo">
+							<img alt="Logo" src="assets/media/logos/logo-light.png" />
+						</a>
+						<!--end::Logo-->
+						<!--begin::Toggle-->
+						<button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
+							<span class="svg-icon svg-icon svg-icon-xl">
+								<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg-->
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										<polygon points="0 0 24 0 24 24 0 24" />
+										<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999)" />
+										<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)" />
+									</g>
+								</svg>
+								<!--end::Svg Icon-->
+							</span>
+						</button>
+						<!--end::Toolbar-->
+					</div>
+					<!--end::Brand-->
+					<!--begin::Aside Menu-->
+					<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+						<!--begin::Menu Container-->
+						<div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+							<!--begin::Menu Nav-->
+							<ul class="menu-nav">
+								<li class="menu-item menu-item-active" aria-haspopup="true">
+									<a href="index.html" class="menu-link">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<polygon points="0 0 24 0 24 24 0 24" />
+													<path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
+													<path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
+												</g>
+											</svg>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text">Bo'sh baqaruv paneli</span>
+									</a>
+								</li>
+								<li class="menu-section">
+									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+								</li>
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="javascript:;" class="menu-link menu-toggle">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text">Uylar bo'limi</span>
+										<i class="menu-arrow"></i>
+									</a>
+									<div class="menu-submenu">
+										<i class="menu-arrow"></i>
+										<ul class="menu-subnav">
+											<li class="menu-item menu-item-parent" aria-haspopup="true">
+												<span class="menu-link">
+													<span class="menu-text">Applications</span>
+												</span>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'recomendation_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">House</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'villa_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Villa</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'apartment_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Apartment</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{%  url  'sell_house_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Uy</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="javascript:;" class="menu-link menu-toggle">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text">Sayt so'zlamalari</span>
+										<i class="menu-arrow"></i>
+									</a>
+									<div class="menu-submenu">
+										<i class="menu-arrow"></i>
+										<ul class="menu-subnav">
+											<li class="menu-item menu-item-parent" aria-haspopup="true">
+												<span class="menu-link">
+													<span class="menu-text">Applications</span>
+												</span>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'banner_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Banner</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'about_us_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Biz haqimizda</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'contact_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Bo'shlanish</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'info_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Info</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'detail_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">Tavsilot</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'testimonial_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">izox</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="{% url 'presintation_view_url' %}" class="menu-link">
+													<i class="menu-bullet menu-bullet-line">
+														<span></span>
+													</i>
+													<span class="menu-text">taqdimot</span>
+													<span class="menu-label">
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+						</div>
+						<!--end::Menu Container-->
+					</div>
+					<!--end::Aside Menu-->
+				</div>
+				<!--end::Aside-->
+						<div class="d-flex flex-column-fluid">
+							<!--begin::Container-->
+							<div class="container">
+								<!--begin::Dashboard-->
+								<!--begin::Row-->
+								<div class="row">
+									<div class="col-lg-6 col-xxl-4">
+										<!--begin::Mixed Widget 17-->
+										<div class="card card-custom gutter-b card-stretch">
+											<!--begin::Header-->
+											<div class="card-header border-0 pt-5">
+												<div class="card-title font-weight-bolder">
+													<div class="card-label">Haftalik reting
+													<div class="font-size-sm text-muted mt-2"></div></div>
+												</div>
+												<div class="card-toolbar">
+													<div class="dropdown dropdown-inline">
+														<a href="#" class="btn btn-clean btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<i class="ki ki-bold-more-hor"></i>
+														</a>
+														<div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+															<!--begin::Naviigation-->
+															<ul class="navi">
+																<li class="navi-header font-weight-bold py-5">
+																	<span class="font-size-lg">Add New:</span>
+																	<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
+																</li>
+																<li class="navi-separator mb-3 opacity-70"></li>
+																<li class="navi-item">
+																	<a href="#" class="navi-link">
+																		<span class="navi-icon">
+																			<i class="flaticon2-shopping-cart-1"></i>
+																		</span>
+																		<span class="navi-text">Order</span>
+																	</a>
+																</li>
+																<li class="navi-item">
+																	<a href="#" class="navi-link">
+																		<span class="navi-icon">
+																			<i class="navi-icon flaticon2-calendar-8"></i>
+																		</span>
+																		<span class="navi-text">Members</span>
+																		<span class="navi-label">
+																			<span class="label label-light-danger label-rounded font-weight-bold">3</span>
+																		</span>
+																	</a>
+																</li>
+																<li class="navi-item">
+																	<a href="#" class="navi-link">
+																		<span class="navi-icon">
+																			<i class="navi-icon flaticon2-telegram-logo"></i>
+																		</span>
+																		<span class="navi-text">Project</span>
+																	</a>
+																</li>
+																<li class="navi-item">
+																	<a href="#" class="navi-link">
+																		<span class="navi-icon">
+																			<i class="navi-icon flaticon2-new-email"></i>
+																		</span>
+																		<span class="navi-text">Record</span>
+																		<span class="navi-label">
+																			<span class="label label-light-success label-rounded font-weight-bold">5</span>
+																		</span>
+																	</a>
+																</li>
+																<li class="navi-separator mt-3 opacity-70"></li>
+																<li class="navi-footer pt-5 pb-4">
+																	<a class="btn btn-light-primary font-weight-bolder btn-sm" href="#">More options</a>
+																	<a class="btn btn-clean font-weight-bold btn-sm d-none" href="#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
+																</li>
+															</ul>
+															<!--end::Naviigation-->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Header-->
+											<!--begin::Body-->
+											<div class="card-body p-0 d-flex flex-column">
+												<!--begin::Items-->
+												<div class="flex-grow-1 card-spacer">
+													<div class="row row-paddingless mt-5 mb-10">
+														<!--begin::Item-->
+														<div class="col">
+															<div class="d-flex align-items-center mr-2">
+																<!--begin::Symbol-->
+																<div class="symbol symbol-45 symbol-light-info mr-4 flex-shrink-0">
+																	<div class="symbol-label">
+																		<span class="svg-icon svg-icon-lg svg-icon-info">
+
+																			<img src="https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/home-protection-care-icon.png" width="44" height="44"  alt=""/>
+																			<!--end::Svg Icon-->
+																		</span>
+																	</div>
+																</div>
+																<!--end::Symbol-->
+																<!--begin::Title-->
+																<div>
+																	{% for i in months %}
+																	<div class="font-size-h4 text-dark-75 font-weight-bolder">{{ i.months }}</div>
+																	{% endfor %}
+																	<div class="font-size-sm text-muted font-weight-bold mt-1">Yangi uylar</div>
+																</div>
+																<!--end::Title-->
+															</div>
+														</div>
+														<!--end::Item-->
+														<!--begin::Item-->
+														<div class="col">
+															<div class="d-flex align-items-center mr-2">
+																<!--begin::Symbol-->
+																<div class="symbol symbol-45 symbol-light-danger mr-4 flex-shrink-0">
+																	<div class="symbol-label">
+																		<span class="svg-icon svg-icon-lg svg-icon-danger">
+																			<img src="https://cdn0.iconfinder.com/data/icons/profession-and-occupation-icons/110/avatar_occupation_profile_business_man_office_team-512.png" width="44" height="44"  alt=""/>
+																			<!--end::Svg Icon-->
+																		</span>
+																	</div>
+																</div>
+																<!--end::Symbol-->
+																<!--begin::Title-->
+																<div>
+																	{% for i in user_months %}
+																	<div class="font-size-h4 text-dark-75 font-weight-bolder">{{ i.months }}</div>
+																	{% endfor %}
+																	<div class="font-size-sm text-muted font-weight-bold mt-1">Adminlar</div>
+																</div>
+																<!--end::Title-->
+															</div>
+														</div>
+														<!--end::Widget Item-->
+													</div>
+													<div class="row row-paddingless">
+														<!--begin::Item-->
+														<div class="col">
+															<div class="d-flex align-items-center mr-2">
+																<!--begin::Symbol-->
+																<div class="symbol symbol-45 symbol-light-success mr-4 flex-shrink-0">
+																	<div class="symbol-label">
+																		<span class="svg-icon svg-icon-lg svg-icon-success">
+																			<img src="https://cdn-icons-png.flaticon.com/512/7653/7653930.png" width="44" height="44"  alt=""/>
+
+																			<!--end::Svg Icon-->
+																		</span>
+																	</div>
+																</div>
+																<!--end::Symbol-->
+																<!--begin::Title-->
+																<div>
+																	{% for i in sell_months %}
+																	<div class="font-size-h4 text-dark-75 font-weight-bolder">{{ i.months }}</div>
+																	{% endfor  %}
+																	<div class="font-size-sm text-muted font-weight-bold mt-1">E'lonlar</div>
+																</div>
+																<!--end::Title-->
+															</div>
+														</div>
+														<!--end::Item-->
+														<!--begin::Item-->
+														<div class="col">
+															<div class="d-flex align-items-center mr-2">
+																<!--begin::Symbol-->
+																<div class="symbol symbol-45 symbol-light-primary mr-4 flex-shrink-0">
+																	<div class="symbol-label">
+																		<span class="svg-icon svg-icon-lg svg-icon-primary">
+																			<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
+																			<img src="https://www.iconpacks.net/icons/2/free-home-sale-icon-2497-thumb.png" width="44" height="44"  alt=""/>
+
+
+																			<!--end::Svg Icon-->
+																		</span>
+																	</div>
+																</div>
+																<!--end::Symbol-->
+																<!--begin::Title-->
+																<div>
+																	<div class="font-size-h4 text-dark-75 font-weight-bolder">0</div>
+																	<div class="font-size-sm text-muted font-weight-bold mt-1">Sotilgan uylar</div>
+																</div>
+																<!--end::Title-->
+															</div>
+														</div>
+														<!--end::Item-->
+													</div>
+												</div>
+												<!--end::Items-->
+												<!--begin::Chart-->
+												<div id="kt_mixed_widget_17_chart" class="card-rounded-bottom" data-color="warning" style="height: 200px"></div>
+												<!--end::Chart-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Mixed Widget 17-->
+
+									</div>
+
+									<div class="col-lg-6 col-xxl-4">
+										<!--begin::Stats Widget 11-->
+										<div class="card card-custom card-stretch card-stretch-half gutter-b">
+											<!--begin::Stats Widget 29-->
+										<div class="card card-custom bgi-no-repeat card-stretch gutter-b" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-1.svg)">
+											<!--begin::Body-->
+											<div class="card-body">
+												<span class="svg-icon svg-icon-2x svg-icon-info">
+													<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
+													<img src="https://cdn-icons-png.flaticon.com/512/7653/7653930.png" width="44" height="44"  alt=""/>
+
+
+													<!--end::Svg Icon-->
+												</span>
+												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">0</span>
+												<span class="font-weight-bold text-muted font-size-sm">E'lonlar soni</span>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Stats Widget 29-->
+										</div>
+										<!--end::Stats Widget 11-->
+										<!--begin::Stats Widget 12-->
+										<div class="card card-custom card-stretch card-stretch-half gutter-b">
+											<!--begin::Stats Widget 29-->
+										<div class="card card-custom bgi-no-repeat card-stretch gutter-b" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-1.svg)">
+											<!--begin::Body-->
+											<div class="card-body">
+												<span class="svg-icon svg-icon-2x svg-icon-info">
+													<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
+													<img src="https://cdn-icons-png.flaticon.com/512/1057/1057231.png" width="44" height="44"  alt=""/>
+
+
+													<!--end::Svg Icon-->
+												</span>
+												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">0</span>
+												<span class="font-weight-bold text-muted font-size-sm">Adminlar soni</span>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Stats Widget 29-->
+
+										</div>
+										<!--end::Stats Widget 12-->
+									</div>
+
+
+									<div class="col-lg-6 col-xxl-4">
+										<!--begin::Stats Widget 11-->
+										<div class="card card-custom card-stretch card-stretch-half gutter-b">
+											<!--begin::Stats Widget 29-->
+										<div class="card card-custom bgi-no-repeat card-stretch gutter-b" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-1.svg)">
+											<!--begin::Body-->
+											<div class="card-body">
+												<span class="svg-icon svg-icon-2x svg-icon-info">
+													<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
+													<img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-real-estate-house-logo-template-png-image_3555540.jpg" width="50" height="50"  alt=""/>
+
+
+													<!--end::Svg Icon-->
+												</span>
+												{% for i in months %}
+												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">203</span>
+												<span class="font-weight-bold text-muted font-size-sm">{{ i.months }}</span>
+												{% endfor %}
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Stats Widget 29-->
+										</div>
+										<!--end::Stats Widget 11-->
+										<!--begin::Stats Widget 12-->
+										<div class="card card-custom card-stretch card-stretch-half gutter-b">
+											<!--begin::Stats Widget 29-->
+										<div class="card card-custom bgi-no-repeat card-stretch gutter-b" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-1.svg)">
+											<!--begin::Body-->
+											<div class="card-body">
+												<span class="svg-icon svg-icon-2x svg-icon-info">
+													<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
+													<img src="https://branition.com/assets/img/users/logos/7470-bOZwJkT.webp" width="100" height="100">
+
+													<!--end::Svg Icon-->
+												</span>
+												<span class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">0</span>
+												<span class="font-weight-bold text-muted font-size-sm">Sotilgan uylar soni</span>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Stats Widget 29-->
+
+										</div>
+										<!--end::Stats Widget 12-->
+									</div>
+
+								</div>
+
+								<!--end::Dashboard-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Entry-->
+
+					</div>
+			<div class="row">
+            <div class="col-12 col-lg-12 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-body">
+                <div class="card">
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    const ctx = document.getElementById('myChart');
+                    new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                      labels: [{% for i in qs %} "{{ i.day }} {{ i.mon }}", {% endfor %}],
+                      datasets: [{
+                      label: '# of Votes',
+                      data: [{% for x in qs %} {{ x.n }}, {% endfor %}],
+                      borderWidth: 2
+                      }]
+                    },
+                    options: {
+                      scales: {
+                      y: {
+                      beginAtZero: true
+                      }
+                      }
+                    }
+                    });
+                </script>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+{% endblock %}

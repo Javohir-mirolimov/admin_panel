@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--begin::Entry-->
+
+
+            <div class="d-flex col-12 flex-column-fluid">
+              <!--begin::Container-->
+
+                <!--end::Notice-->
+                <!--begin::Card-->
+                <div class="card card-custom">
+                  <div class="example">
+				<div class="example-preview">
+					<!-- Button trigger modal-->
+                  <a href="{% url 'index_view_url' %}" class="btn btn-light-primary font-weight-bold mr-2">Bosh sahifaga qaytish</a>
+
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Bog'lanish yaratish</button>
+					<!-- Modal-->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content col-12">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Bog'lanosh yaratish</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<i aria-hidden="true" class="ki ki-close"></i>
+									</button>
+								</div>
+                              <form action="{% url 'create_contact_url' %}" method="post" enctype="multipart/form-data">
+                                          {% csrf_token %}
+
+                                          <!-- Add input fields for each attribute of the Home model -->
+
+                                  <label>Nomi</label>
+                                  <input type="text" name="name" required><br><br>
+
+                                  <label>Email</label>
+                                  <input type="text" name="email" required><br><br>
+
+
+
+
+
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary font-weight-bold">Save changes</button>
+                                  </div>
+                                </form>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+                  <div class="card-header">
+                    <div class="card-title">
+                      <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Home\Home.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24"/>
+                          <path d="M3.95709826,8.41510662 L11.47855,3.81866389 C11.7986624,3.62303967 12.2013376,3.62303967 12.52145,3.81866389 L20.0429,8.41510557 C20.6374094,8.77841684 21,9.42493654 21,10.1216692 L21,19.0000642 C21,20.1046337 20.1045695,21.0000642 19,21.0000642 L4.99998155,21.0000673 C3.89541205,21.0000673 2.99998155,20.1046368 2.99998155,19.0000673 L2.99999828,10.1216672 C2.99999935,9.42493561 3.36258984,8.77841732 3.95709826,8.41510662 Z M10,13 C9.44771525,13 9,13.4477153 9,14 L9,17 C9,17.5522847 9.44771525,18 10,18 L14,18 C14.5522847,18 15,17.5522847 15,17 L15,14 C15,13.4477153 14.5522847,13 14,13 L10,13 Z" fill="#000000"/>
+                        </g>
+                      </svg><!--end::Svg Icon--></span>
+                      <h3 class="card-label"> Bog'lanish </h3>
+                    </div>
+                    <div class="card-toolbar">
+                      <!--begin::Dropdown-->
+                      <div class="dropdown dropdown-inline mr-2">
+
+
+
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
+                        <!--end::Dropdown Menu-->
+                          </div>
+                      <!--end::Dropdown-->
+                      <!--begin::Button-->
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <!--begin: Datatable-->
+                    <table class="table table-bordered table-checkable" id="kt_datatable" style="margin-top: 13px !important">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Nomi</th>
+                          <th>Email</th>
+                          <th>O'zartirish</th>
+                          <th>O'chirish</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for i in contact %}
+                        <tr>
+                          <td>{{ i.id }}</td>
+                          <td>{{ i.name }}</td>
+                          <td>{{ i.email }}</td>
+                          <td>
+                            <!-- Button trigger modal-->
+                          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#update{{ i.id }}">
+                            Update
+                          </button>
+<!-- Modal-->
+                          <div class="modal fade" id="update{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i aria-hidden="true" class="ki ki-close"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body" style="height: 800px;">
+                                  <!--begin::Entry-->
+                                  <div class="d-flex flex-column-fluid">
+                                    <!--begin::Container-->
+                                    <div class="container">
+                                      <!--begin::Card-->
+                                      <div class="card card-custom card-sticky" id="kt_page_sticky_card">
+                                        <div class="card-body">
+                                          <!--begin::Form-->
+                                          <form action="{% url 'update_contact_url' i.pk %}" method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+
+                                            <!-- Add input fields with initial values for each attribute of the Home model -->
+                                            <label>Nomi</label>
+                                              <input type="text" name="name"  value="{{ i.name }}" required><br><br>
+                                            <label>Email</label>
+                                              <input type="text" name="email"  value="{{ i.email }}" required><br><br>
+
+
+
+                                            <!-- ... (remaining form fields) ... -->
+
+                                            <button type="submit">Update Home</button>
+                                          </form>
+                                        </div>
+                                </div>
+                            </td>
+                          <td>
+                            <!-- Button trigger modal-->
+                            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal1">
+                              Delete
+                            </button>
+
+<!-- Modal-->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">O'chirish</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <i aria-hidden="true" class="ki ki-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    O'chirib yuborishga aminmisiz
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-light"><a href="{% url 'delete_contact_url' i.pk %}" class="btn btn-light-danger font-weight-bold mr-2">Delete</a></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                    <!--end: Datatable-->
+                  </div>
+                </div>
+                <!--end::Card-->
+              </div>
+              <!--end::Container-->
+            </div>
+            <!--end::Entry-->
+          </div>
+          <!--end::Content-->
+{% endblock %}
